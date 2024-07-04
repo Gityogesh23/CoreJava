@@ -1,5 +1,6 @@
 //package CoreJava.IVCodes;
-
+/*
+way 1)to reverse String using charAt() method.
 import java.util.Scanner;
 public class ReverseString {
     static String str,rstr="";
@@ -18,5 +19,7 @@ public class ReverseString {
     }
     System.out.println("reverse string "+rstr);
     }
-  }
+}
+*/
+2. Reverse a String using String Builder / String Buffer Class
 
