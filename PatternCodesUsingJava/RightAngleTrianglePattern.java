@@ -6,7 +6,7 @@ package PatternCodesUsingJava;
       * * *
     * * * *
  */
-public class RightAngleTrianglePattern {
+public class LeftAngleTrianglePattern {
 	public static void main(String args[]) {
 		  int row=6;
 		 for(int i=0;i<row;i++) {
