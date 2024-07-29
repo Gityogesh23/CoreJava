@@ -12,7 +12,7 @@ class Triangle{
                 System.out.print(" ");
             }
             for(int j=0;j<=i;j++){  //to print *
-                System.out.print("* ");
+                System.out.print("*");
             }
             System.out.println("");
         }

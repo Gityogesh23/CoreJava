@@ -1,4 +1,4 @@
-package PatternCodesUsingJava;
+
 /*
   to print RightAngleTriangle Pattern:
           *
