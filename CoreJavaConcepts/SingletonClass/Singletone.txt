@@ -1,0 +1,114 @@
+Singleton class: 
+    In object-oriented programming, a class is a blueprint or template for creating objects.
+Each object created from a class has its own set of attributes (data) and methods
+(functions) that define its behaviour. In some cases, ## we may only want one instance of
+a class to exist throughout the entire lifetime of a program. This is where the 
+Singleton pattern comes in. In this article, we will discuss the Singleton pattern 
+in Java and provide some example programs to demonstrate its use
+
+# What is a Singleton Class?
+A Singleton class is a class that allows only one instance of itself to be 
+created and provides a global point of access to that instance. This is achieved by 
+making the constructor private, so that no other instances of the class can be created, 
+and providing a static method that returns the single instance of the class.
+
+The Singleton pattern is commonly used in situations where a single instance of a
+class needs to coordinate actions across the system, such as in a logging or
+configuration system. It ensures that there is only one instance of the class,
+which can be accessed globally, preventing unnecessary duplication and ensuring 
+consistency across the system.
+
+## Implementing a Singleton Class in Java:
+1) Declare a private static variable to hold the single instance of the class.
+2) Make the constructor of the class private, so that no other instances can be created.
+3) Provide a public static method to return the single instance of the class, creating it if necessary.
+
+# Example 1: Singleton Class with Eager Initialization:
+In this example, we will use eager initialization to create the single instance of the Singleton class.
+It means that the instance is created when the class is loaded, rather than when it is first accessed.
+
+public class Singleton {  
+    private static final Singleton instance = new Singleton();  
+    private Singleton() {}  
+    public static Singleton getInstance() {  
+        return instance;  
+    }  
+}  
+In this example, we declare a private static variable called instance to hold the single instance of the class.
+We make the constructor of the class private so that no other instances can be created, 
+and we provide a public static method called getInstance to return the single instance of the class.
+The getInstance method simply returns the instance variable.
+
+Let's see how we can use this Singleton class in a program.
+public class SingletonDemo {  
+    public static void main(String[] args) {  
+        Singleton singleton1 = Singleton.getInstance();  
+        Singleton singleton2 = Singleton.getInstance();  
+        if (singleton1 == singleton2) {  
+            System.out.println("Both objects are the same instance.");  
+        }  
+    }  
+}  
+
+o/p:Both objects are the same instance.
+
+In this example, we create two instances of the Singleton class using the getInstance
+method. Since the instance variable is static and initialized when the class is loaded,
+both instances will be the same object. We use an if statement to check if the two 
+instances are the same object, and we print a message to the console indicating that 
+they are.
+
+# Example 2: Singleton Class with Lazy Initialization:
+In the previous example, we used eager initialization to create the single instance of 
+the Singleton class. This approach works well if the Singleton class is lightweight and
+has no dependencies on other classes. However, if the Singleton class is heavyweight or
+has dependencies, eager initialization may not be the best approach.
+
+In this example, we will use lazy initialization to create the single instance of 
+the Singleton class. This means that the instance is created when it is first accessed, 
+rather than when the class is loaded.
+public class Singleton {  
+    private static Singleton instance;  
+    private Singleton() {}  
+    public static synchronized Singleton getInstance() {  
+if (instance == null) {  
+instance = new Singleton();  
+}  
+return instance;  
+}  
+}  
+
+In this example, we declare a private static variable called `instance` to hold the single 
+instance of the class. Unlike the previous example, we do not initialize this variable 
+when it is declared. Instead, we use lazy initialization in the `getInstance` method to 
+create the instance when it is first accessed.
+
+The `getInstance` method is synchronized to prevent multiple threads from creating 
+multiple instances of the Singleton class. We check if the `instance` variable is null, 
+and if it is, we create a new instance of the Singleton class. If the `instance` variable
+is not null, we simply return the existing instance.
+Let's see how we can use this Singleton class in a program.
+
+public class SingletonDemo {  
+public static void main(String[] args) {  
+Singleton singleton1 = Singleton.getInstance();  
+Singleton singleton2 = Singleton.getInstance();  
+    if (singleton1 == singleton2) {  
+        System.out.println("Both objects are the same instance.");  
+    }  
+}  
+}  
+Output: Both objects are the same instance.
+
+In this example, we create two instances of the Singleton class using the `getInstance` 
+method. The first time the `getInstance` method is called, the instance is created.
+ The second time the method is called, the existing instance is returned. We use an 
+ if statement to check if the two instances are the same object, and we print a message 
+ to the console indicating that they are.
+
+In this section, we discussed the Singleton pattern in Java and provided some example 
+programs to demonstrate its use. We saw how to implement a Singleton class using both 
+eager and lazy initialization, and we saw how to use the Singleton class in a program.
+The Singleton pattern is a useful design pattern that can help ensure consistency and
+prevent unnecessary duplication in a system.
+
