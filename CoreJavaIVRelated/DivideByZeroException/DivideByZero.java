@@ -1,3 +1,4 @@
+package DivideByZeroException;
 import java.util.Scanner;
 class DivideByZero{
      public static void main(String[] args) {

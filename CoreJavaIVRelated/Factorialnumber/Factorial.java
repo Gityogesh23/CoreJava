@@ -1,3 +1,4 @@
+package Factorialnumber;
 
 /*Factorial using Recursion :
 Logic:
