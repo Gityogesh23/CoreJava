@@ -23,6 +23,9 @@ public class Singleton {
         // Step 4: Test Singleton behavior
         Singleton singleton1 = Singleton.getInstance();
         Singleton singleton2 = Singleton.getInstance();
+        //just for curiocity checking their hashcodes
+        System.out.println("singleton1="+singleton1);//Singleton@8807e25
+        System.out.println("singleton2="+singleton2);//Singleton@8807e25
 
         if (singleton1 == singleton2) {
             System.out.println("Both objects are the same instance.");
