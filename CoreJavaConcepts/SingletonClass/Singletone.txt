@@ -1,4 +1,4 @@
-Singleton class: 
+## Singleton class: 
     In object-oriented programming, a class is a blueprint or template for creating objects.
 Each object created from a class has its own set of attributes (data) and methods
 (functions) that define its behaviour. In some cases, ## we may only want one instance of
