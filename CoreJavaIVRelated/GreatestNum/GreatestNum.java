@@ -39,6 +39,6 @@ class GreatestNum {
         }
         else{
         System.out.println(Math.max(num1,num2)+" "+ "is greater");
-        }
+        } 
     }
 }
