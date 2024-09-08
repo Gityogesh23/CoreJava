@@ -11,8 +11,10 @@ public class GreatestOfThreeNumbers {
         System.out.println("Enter the num2: ");
         int num2=sc.nextInt();
         System.out.println("Enter the num3: ");
-        int num3=sc.nextInt();
-
+        int num3=sc
+        .nextInt();
+/* 
+       1)  //if-else ladder
         if(num1>=num2 && num1>=num3){
             System.out.println("Num 1 is greater"); 
         }
@@ -24,9 +26,13 @@ public class GreatestOfThreeNumbers {
             System.out.println("Num 3 is greater"); 
 
         }
-
-         
-     
-
+    }
+}
+*/
+//2)using ternary operator:condition()?(if true:Action):(if flase:Action)
+int temp,result;
+    temp=num1>num2?num1:num2;
+    result=temp>num3?temp:num3;
+    System.out.println("greatest of three numbers:" + result);
     }
 }
