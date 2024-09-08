@@ -1,0 +1,266 @@
+
+## IV QnA:(Date 24 April 2024)
+
+
+
+Q1)EXPLAIN OOPS CONCEPT :
+
+Ans: 
+     OOPS is not a syntax. It is a programming methodology which is used to solve real world problems.
+
+	oops is all about using classes and objects
+
+	# Dr Alan kay is inventor of OOPS.
+
+# OOPS includes:1)class2)Object3)Abstraction4)Encapsulation5)Inheritance6)Polymorphism(compile-time & runtime polymorphism)
+7)concurrency 8)Persistence
+ 
+OOPL==>C++,Python,c#,javascript,simula,smalltalk and swift etc.
+
+1)Class==>def :A class is a user-defined blueprint  from which objects are created.
+	      its an logical entity which doesn't gets space into memory.
+ 	      It represents the set of properties or methods that are common to all objects of one type. 
+	      Using classes, you can create multiple objects with the same behavior instead of writing their code multiple times.
+	
+2)Object =>def: its an physical entity which gets space into memory.
+		Value of the data member represents state of the object.
+		instantiation represents abstraction.
+
+	   State:    Value stored inside object is called as state of the object.
+		     Value of the data member represents state of the object.
+
+
+	   Behavior: Set of operations which are allowed to perform on object is called behavior of the object.
+		     Member function defined inside class represents behavior of the object
+
+	   Identity: It gives a unique name to an object and enables one object to interact with other objects. 
+
+ 	   
+##Pillars of OOPs==>
+
+1)Abstraction:
+	It is a major pillar of oops.
+	Process of getting essential things from instance / system is called as abstraction.
+	Abstraction focuses on external behavior of the instance.
+	Abstraction changes from entity to entity.
+	Abstraction helps to acheive simplicity.
+	In Java, if we want to achieve abstraction then we should create instance and invoke method on it.
+
+e.g.1)USING ABSTARCT CLASS:
+abstract class Shape {
+    abstract void draw();
+}
+
+public class Circle extends Shape {
+    @Override
+    void draw() {
+        System.out.println("Drawing a circle.");
+    }
+}
+
+e.g.1)USING INTERFACE
+interface Animal {
+    void makeSound();
+}
+
+public class Dog implements Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("The dog barks.");
+    }
+}
+
+
+
+2)Encapsulation:
+ Definition:  Binding of data and code together is called as encapsulation.
+	#Implementation of abstraction is called as encapsulation.
+
+	Abstraction and encapsulation are complementry concepts. In other words abstraction focuses on
+	external behavior whereas encapsulation focuses on  internal behavior.
+	Using encapsulation:
+	We can achieve abstraction
+	We can hide data from user:
+	Process of declaring fields private is called as data hiding. Data hiding is also called as
+	data encapsulation.
+	Data hiding helps us to achieve data security.
+	To achieve encapsulation we should define class. Hence class is considered as a basic unit of
+	encapsulation.
+e.g.public class Person {
+    private String name;
+    private int age;
+    
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public int getAge() {
+        return age;
+    }
+    
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+3)Inheritance:  The capability of a class to derive properties and characteristics from another class is called Inheritance. Inheritance is one        		of the most important features of Object-Oriented Programming.
+
+  
+4)Polymorphism:		It comes from the greek roots "poly" (many) and "morphs" (form).
+			An ability of an instance to take multiple forms is called as Polymorphism.
+			If we want to reduce maintenance of the system then we should use Polymorphism.
+    
+    #Compile-time polymorphism We can achieve it using method overloading .
+
+e.g. COMPILE-TIME :METHOD OVERLOADING:
+
+public class MathOperations {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    
+    public double add(double a, double b) {
+        return a + b;
+    }
+}
+
+
+    #Runtime polymorphism: In Java, it is also called as dynamic method dispatch.(calling an super class method using sub class object .=>even if that method is not present in sub type but it must be in super type then super class method is called. )
+		           We can achieve it using method overriding.
+
+e.g.Runtime polymorphism=>Run-Time Polymorphism
+	public class Animal {
+    public void sound() {
+        System.out.println("This animal makes a sound.");
+    }
+}
+
+public class Cat extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("The cat meows.");
+    }
+}
+
+
+ ## Minor pillars of OOPS:
+//Typing :
+
+Concurrency: It is a minor pillar of oops.
+		   It is the process of executing multiple task simultaneously.
+Main purpose of concurrency is to utilize h/w resources efficiently.
+		   In Java we can achieve concurrency using multithreading.
+
+     Persistence: It is a minor pillar of oops.
+		  It is the process of maintaining state of instance of secondary storage( HDD / DB ).
+		  In Java, we can achieve Persistence using serialization , JDBC etc.
+		  Persistence helps to achieve reliability.
+
+ 
+Q2) explain static keyword.
+
+Ans:	The static keyword in Java is used for memory management mainly. We can apply static keyword with variables, methods, blocks and nested 	classes. The static keyword belongs to the class than an instance of the class.
+
+The static can be:
+
+1)Variable (also known as a class variable)
+2)Method (also known as a class method)
+3)Block
+4)Nested class
+
+1) java static variable:  If you declare any variable as static, it is known as a static variable.
+
+		The static variable can be used to refer to the common property of all objects (which is not unique for each object), for 			example, the company name of employees, college name of students, etc.
+		The static variable gets memory only once in the class area at the time of class loading.
+
+2) Java static method:  If you apply static keyword with any method, it is known as static method.
+
+			A static method belongs to the class rather than the object of a class.
+			A static method can be invoked without the need for creating an instance of a class.
+			A static method can access static data member and can change the value of it.
+
+3) Java static block:
+			Is used to initialize the static data member.
+			It is executed before the main method at the time of class  loading.
+Eg. 
+	class A2{  
+    			static{System.out.println("static block is invoked");}  
+    			public static void main(String args[]){  
+     			System.out.println("Hello main");  
+ 		 }  
+	}  
+
+		O/P==>static block is invoked
+      		      Hello main
+	
+4)Java static nested class:
+     			A static class is a class that is created inside a class, is called a static nested class in Java. It cannot access non-static data members and methods. It can be accessed by outer class name.
+  It can access static data members of the outer class, including private.
+The static nested class cannot access non-static (instance) data members .
+
+
+Eg: class TestOuter1{  
+    static int data=30;  
+    static class Inner{   //can't able to access non-static data members and non-static methods of outer class name.
+    void msg(){System.out.println("data is "+data);}  
+   }  
+    public static void main(String args[]){  
+    TestOuter1.Inner obj=new TestOuter1.Inner();  
+    obj.msg();  
+  }  
+
+}
+
+O/P:data is 30
+
+  
+
+Q 3)Q) Why is the Java main method static?(how its not non-static ? this is imp que =>ones we get experience then prepared this while plan to switch.)
+
+Ans==>	It is because the object is not required to call a static method. If it were a non-static method, JVM creates an object first then call 	main() method that will lead the problem of extra memory allocation.
+
+
+Q4)Explain this() keyword in java.
+
+Ans=>There can be 6 usage of Java this keyword. In Java, this is a reference variable that refers to the current object.
+
+	1) this can be used to refer current class instance variable.
+	2)this can be used to invoke current class method (implicitly)
+	3)this() can be used to invoke current class constructor.
+	4)this can be passed as an argument in the method call.
+	5)this can be passed as argument in the constructor call.
+	6)this can be used to return the current class instance from the method.
+
+
+Q5)difference between final,finally and finalize().
+ 
+Ans:	final (lowercase) is a reserved keyword in java. We can’t use it as an identifier, as it is reserved. We can use this keyword with 	variables, methods, and also with classes. The final keyword in java has a different meaning depending upon whether it is applied to a 	variable, class, or method.
+
+	final with Variables: The value of the variable cannot be changed once initialized.
+	If we declare any variable as final, we can’t modify its contents since it is final, and if we modify it then we get Compile Time Error.
+	
+	final with Class: The class cannot be subclassed. Whenever we declare any class as final, it means that we can’t extend that class or 				  that class can’t be extended, or we can’t make a subclass of that class. 
+	final with Method: The method cannot be overridden by a subclass. Whenever we declare any method as final, then it means that we can’t           	                   override that method. 
+   (Note : If a class is declared as final as by default all of the methods present in that class are automatically final, but variables are not. )
+
+	
+finally:  Just as final it is a reserved keyword, so in the same way finally is also a reserved keyword in java i.e, we can’t use it as an 	         	  identifier. The finally keyword is used in association with a try/catch block and guarantees that a section of code will be executed, 	  even if an exception is thrown. The final block will be executed after the try and catch blocks, but before control transfers back to 	  its origin. finally is executed even if try block has return statement.
+
+	  Application of finally block: So basically the use of finally block is resource deallocation. This means all the resources such as 	       	  Network Connections, and Database Connections, which we opened in the try block is needed to be closed so that we won’t lose our 	  	  resources as opened. So those resources are needed to be closed in the final block. 
+
+finalize():It is a method that the Garbage Collector always calls just before the deletion/destroying of the object which is eligible for 	 	  Garbage Collection, so as to perform clean-up activity. Clean-up activity means closing the resources associated with that object like 	  Database Connection, Network Connection, or we can say resource de-allocation. Remember, it is not a reserved keyword. Once the 	    	  finalized method completes immediately Garbage Collector destroys that object. finalize method is present in the Object class .
+
+ syntax is:
+
+protected void finalize throws Throwable{}
+
+	Since the Object class contains the finalize method, hence finalize method is available for every Java class since Object is the 	superclass of all Java classes. Since it is available for every java class hence Garbage Collector can call finalize method on any Java 	object Now, the finalize method which is present in the Object class, has an empty implementation, in our class clean-up activities are 	there, then we have to override this method to define our own clean-up activities. Cases related to finalizing method:
+
+Important points:
+
+	There is no guarantee about the time when finalize is called. It may be called any time after the object is not being referred anywhere 	(can be garbage collected).
+	JVM does not ignore all exceptions while executing finalize method, but it ignores only unchecked exceptions. If the corresponding catch 	block is there, then JVM won’t ignore any corresponding catch block and will be executed.
+	System.gc() is just a request to JVM to execute the Garbage Collector. It’s up to JVM to call Garbage Collector or not. Usually, JVM 	calls Garbage Collector when there is not enough space available in the Heap area or when the memory is low.	
