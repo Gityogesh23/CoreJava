@@ -48,6 +48,7 @@ public class FindLargestElement {
 */
 //2)using itration
 import java.util.Scanner;
+import java.util.*;
 
 public class FindLargestElement
 { 
@@ -60,11 +61,8 @@ public class FindLargestElement
    public static void main(String args[])
    {
 
-      int arr[] = {12, 13, 1, 10, 34, 10};//or int[] arr=new int[]{12,13,1,10,34};
+      int arr[] = {12, 13, 1, 10, 34, 10};
       int n = arr.length;
       System.out.print(getmax(arr, n)); 
-      
    }
 }
-
-//3)Recursion Approach:

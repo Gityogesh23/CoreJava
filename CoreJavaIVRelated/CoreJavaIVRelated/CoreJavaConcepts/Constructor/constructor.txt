@@ -1,0 +1,80 @@
+Q) Does constructor return any value?
+Yes, it is the current class instance (You cannot use return type yet it returns a value).
+
+Q) Can constructor perform other tasks instead of initialization?
+ans:Yes, like object creation, starting a thread, calling a method, etc. You can perform any operation in the constructor
+as you perform in the method.
+
+Q)Is there Constructor class in Java?
+ANS==>Yes
+Q)What is the purpose of Constructor class?
+Java provides a Constructor class which can be used to get the internal information 
+of a constructor in the class. It is found in the java.lang.reflect package.
+
+Constructor calling Sequence=>
+1) Static Initializers: If a class has any static initialization blocks, they are executed
+ first. These blocks are executed only once when the class is loaded by the JVM.
+ eg.class Example {
+    static {
+        System.out.println("Static initializer");
+    }
+}
+2)Parent Class Constructor: When creating an instance of a class, the constructor of 
+the parent class (superclass) is called before the constructor of the child class 
+(subclass). This is done implicitly if you don't explicitly call it.
+eg.class Parent {
+    Parent() {
+        System.out.println("Parent Constructor");
+    }
+}
+
+class Child extends Parent {
+    Child() {
+        System.out.println("Child Constructor");
+    }
+}
+output:Parent Constructor
+       Child Constructor
+
+3)Instance Initializers: If a class has instance initialization blocks (non-static blocks),
+ they are executed before the constructor body. They are executed each time an instance of
+  the class is created.
+
+  class Example {
+    {
+        System.out.println("Instance initializer block");
+    }
+
+    Example() {
+        System.out.println("Constructor");
+    }
+}
+Output:
+Instance initializer block
+Constructor
+
+4)Constructor Execution: Finally, the constructor of the class being instantiated is executed.
+ The constructor can also explicitly call another constructor of the same class using this(),
+ or call the constructor of its superclass using super().
+ 
+ eg.class Example {
+    Example() {
+        this("default");
+        System.out.println("Constructor");
+    }
+
+    Example(String msg) {
+        System.out.println("Constructor with message: " + msg);
+    }
+}
+output:
+Constructor with message: default
+Constructor
+
+# Summary of Sequence
+Static Initialization Blocks (executed once when the class is first loaded).
+Parent Class Constructor (if there’s a parent class).
+Instance Initializer Blocks (executed before the constructor).
+Constructor Execution (of the class being instantiated).
+Understanding this sequence ensures that objects are correctly initialized,
+especially when dealing with complex class hierarchies and initialization logic.
