@@ -1,6 +1,8 @@
 
 //package CoreJavaConcepts.ReverseNumber;
 //we are going to reverse the number 
+
+/*
 import java.util.Scanner;
 
 public class ReverseNumber{
@@ -25,4 +27,7 @@ public class ReverseNumber{
         
         }
     }
+*/
+//3)method 2)same by recursion 
+import java.util.Scanner;
 
