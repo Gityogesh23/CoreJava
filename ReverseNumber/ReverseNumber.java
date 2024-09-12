@@ -1,19 +1,20 @@
-package ReverseNumber;
+
 //package CoreJavaConcepts.ReverseNumber;
 //we are going to reverse the number 
 import java.util.Scanner;
 
-public class ReverseNumber {
+public class ReverseNumber{
 
     public static void ReverseNum(int n){
         //logic
-        if(n<10){
+        if(n<10){///print the unit digit of the given number
             System.out.println(n);
             return;
         }
         else{
             System.out.print(n%10);
-            ReverseNum(n);
+            //calling function for remainig number other than unit digit.
+            ReverseNum(n/10);
         }
     }
     public static void main(String[] args){
