@@ -31,16 +31,17 @@ public class ReverseNumber{
 //3)method 2)same by recursion 
 import java.util.Scanner;
 
-class reverseNumber{
+class ReverseNumber{
 
     public static int ReverseNum(int num){
-        int sum=0;//local var,need to initialize
-        int temp=num;//this is my prev logic to reverse th number
+        int rev_num=0;//local var,need to initialize
+        
         while(num>0){
-            int remainder=num%10;
-            sum=sum*10+remainder;
-            
+           
+            rev_num=rev_num*10+num%10;
+            num=num/10;
         }
+        return rev_num;
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
