@@ -29,5 +29,5 @@ public class ReverseNumber{
     }
 */
 //3)method 2)same by recursion 
-import java.util.Scanner;
+//import java.util.Scanner;
 
