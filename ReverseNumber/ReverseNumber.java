@@ -29,5 +29,29 @@ public class ReverseNumber{
     }
 */
 //3)method 2)same by recursion 
-//import java.util.Scanner;
+import java.util.Scanner;
 
+class reverseNumber{
+
+    public static int ReverseNum(int num){
+        int sum=0;//local var,need to initialize
+        int temp=num;//this is my prev logic to reverse th number
+        while(num>0){
+            int remainder=num%10;
+            sum=sum*10+remainder;
+            
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the numebr which we want to reverse: ");
+        int number=sc.nextInt();
+        if(number<0){
+            System.out.println("Number should be positive");
+            return;
+        }
+        else{
+        System.out.println("The number reversed finally: "+ ReverseNum(number));
+        }
+    }
+}
