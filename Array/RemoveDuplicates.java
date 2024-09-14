@@ -10,7 +10,8 @@ public class RemoveDuplicates{
        int n = sc.nextInt(); 
        if (n < 1) {
            System.out.println("Size should not be negative.");
-       } else {
+       } 
+       else {
            int[] arr = new int[n]; // initializing array
 
            // Input array elements

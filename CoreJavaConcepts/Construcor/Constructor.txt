@@ -1,0 +1,198 @@
+# Why a Constructor can not be final, static or abstract in Java?
+
+Prerequisite: Inheritance in Java
+Constructor in java is a special type of method which is different from normal java 
+methods/ordinary methods. Constructors are used to initialize an object. Automatically
+a constructor is called when an object of a class is created. It is syntactically 
+similar to a method but it has the same name as its class and a constructor does not 
+have a return type. 
+
+Java constructor can not be final
+
+One of the important property of java constructor is that it can not be final. As we know,
+ constructors are not inherited in java. Therefore, constructors are not subject to hiding
+  or overriding. When there is no chance of constructor overriding, there is no chance of 
+  modification also. When there is no chance of modification, then no sense of restricting 
+  modification there. We know that the final keyword restricts further modification. So a 
+  java constructor can not be final because it inherently it cannot be modified. Also, a 
+  java constructor is internally final. So again there is no need for final declaration 
+  further. 
+
+Example: Suppose we are declaring a java constructor as final, now let’s see what is 
+happening.
+
+// Java Constructor as final
+ 
+import java.io.*;
+class GFG {
+ 
+    // GFG() constructor is declared final
+    final GFG()
+    {
+        // This line can not be executed as compile error
+        // will come
+        System.out.print(
+            "Hey you have declared constructor as final, it's error");
+    }
+}
+class Main {
+    public static void main(String[] args)
+    {
+        // Object of GFG class created
+        // Automatically GFG() constructor called
+        GFG obj = new GFG();
+    }
+}
+ 
+Output: 
+
+prog.java:4: error: modifier final not allowed here
+final GFG( )
+      ^
+1 error
+From the above example also it is clear that if we are defining constructor as final the 
+compiler will give an error as modifier final not allowed.
+
+ 
+
+Java constructor can not be static 
+
+One of the important property of java constructor is that it can not be static. We know 
+static keyword belongs to a class rather than the object of a class. A constructor is 
+called when an object of a class is created, so no use of the static constructor. Another 
+thing is that if we will declare static constructor then we can not access/call the 
+constructor from a subclass. Because we know static is allowed within a class but not 
+by a subclass.
+
+Example:
+
+
+// java class and a subclass
+ 
+import java.io.*;
+ 
+class GFG {
+    public GFG()
+    {
+        // Constructor of GFG class
+        System.out.println("GFG Constructor");
+    }
+}
+class SubClass extends GFG {
+ 
+    SubClass()
+    {
+        // Constructor of SubClass class
+        // By default super() is hidden here
+        // So Super class i.e GFG class constructor called
+        System.out.println("Subclass Constructor");
+    }
+    public static void main(String args[])
+    {
+        // SubClass class object created
+        // Automatically SubClass() constructor called
+        SubClass obj = new SubClass();
+    }
+}
+Output
+GFG Constructor
+Subclass Constructor
+Above example expresses that, when an object of subclass is created then Superclass 
+constructor is called by Subclass constructor through constructor chaining. But if 
+we make superclass constructor static then it can’t be called by Subclass as above 
+said static it is accessible within the class but not by the subclass.
+
+One more important reason for not declaring the constructor as static is that, we know a 
+static member is executed first in a program just like the main method which is static 
+and executed first. But constructor is called each and every time when an object is 
+created. But if we will declare it static then the constructor will be called before 
+object creation. So in general if we will see static and constructor are opposite to 
+each other if we want to assign initial values for an instance variable we can use 
+constructor and if we want to assign static variables we can use static blocks. 
+
+Example: Suppose we are declaring a java constructor as static, now let’s see what is 
+happening.
+
+// java constructor as static
+ 
+import java.io.*;
+ 
+class GFG {
+   
+    // GFG() constructor is declared static
+    static GFG()
+    {
+        // This line can not be executed as it compile error
+        // will come
+        System.out.print(
+            "Hey you have declared constructor as static, it's error");
+    }
+}
+class Main {
+    public static void main(String[] args)
+    {
+        // Object of GFG class created
+        // Automatically GFG() constructor called
+        GFG obj = new GFG();
+    }
+}
+ 
+Output:
+
+prog.java:5: error: modifier static not allowed here
+ static GFG( )
+        ^
+1 error
+From the above example also it is clear that if we are defining constructor as static 
+the compiler will give an error as modifier static not allowed.
+
+ 
+
+Java constructor can not be abstract 
+
+One of the important property of java constructor is that it can not be abstract. 
+If we are declaring a constructor as abstract as we have to implement it in a child 
+class, but we know a constructor is called implicitly when the new keyword is used 
+so it can’t lack a body and also it can not be called as a normal method. Also, if 
+we make a constructor abstract then we have to provide the body later. But we know 
+constructor can not be overridden so providing body is impossible. Hence, what we
+will do with this abstract constructor when we can not provide implementation to it.
+
+Example: Suppose we are declaring a java constructor as abstract, now let’s see what 
+is happening
+
+// java constructor as static
+ 
+import java.io.*;
+abstract class GFG {
+   
+    // GFG() constructor is declared abstract
+    abstract GFG()
+    {
+        // This line can not be executed as compile error
+        // will come
+        System.out.print(
+            "Hey you have declared constructor as abstract, it's error");
+    }
+}
+class Main {
+    public static void main(String[] args)
+    {
+        // Object of GFG class created
+        // Automatically GFG() constructor should be called
+        // But object creation in abstract class is error
+        GFG obj = new GFG();
+    }
+}
+Output: 
+
+prog.java:5: error: modifier abstract not allowed here
+ abstract GFG( )
+          ^
+prog.java:17: error: GFG is abstract; cannot be instantiated
+   GFG obj = new GFG();
+             ^
+2 errors
+
+From the above example also it is clear that if we are defining constructor as 
+abstract ,the compiler will give an error as modifier abstract not allowed.
