@@ -50,16 +50,19 @@ the compiler will give an error as modifier final not allowed.
 // java class and a subclass
 import java.io.*;
 
-class Constructor1 {
-	public Constructor1()
+class Constructor {
+	public static void main(String[] args) {
+		
+
+	public Constructor()
 	{
 		// Constructor of GFG class
-		System.out.println("GFG Constructor");
+		System.out.println("calling Constructor");
 	}
 }
-class SubClass extends Constructor1{
+class Constructor1 extends Constructor{
 
-	SubClass()
+	Constructor1()
 	{
 		// Constructor of SubClass class
 		// By default super() is hidden here
@@ -70,6 +73,6 @@ class SubClass extends Constructor1{
 	{
 		// SubClass class object created
 		// Automatically SubClass() constructor called
-		SubClass obj = new SubClass();
+		Constructor1 obj = new Constructor1();
 	}
 }
