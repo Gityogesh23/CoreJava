@@ -76,3 +76,27 @@ public class SumOfArrayElements {
         }
     }
 }
+/*
+//Method 2) : Also refer for different Logic .
+
+ import java.util.Scanner;
+
+public class Main
+{
+   static int getSum(int arr[], int index, int len){
+
+       if(index==len-1)
+         return arr[index];
+
+       return arr[index] + getSum(arr, index+1, len);
+   }
+   public static void main(String args[])
+   {
+
+      int arr[] = {12, 13, 1, 10, 34, 10};
+
+      int n = arr.length;
+      System.out.print(getSum(arr, 0, n)); 
+   }
+}
+ */
