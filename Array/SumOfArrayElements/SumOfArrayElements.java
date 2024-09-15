@@ -24,7 +24,14 @@ public class SumOfArrayElements {
                 System.out.print(" " + arr[i]);
             }
             System.out.println();
-        }
         
+        //logic to sum the array elements
+        int sum=0;
+        for(int i=0;i<n;i++){
+            sum=sum+arr[i];
+        }
+        System.out.println("Sum of Array Elements: "+sum);
     }
+ }
+
 }
