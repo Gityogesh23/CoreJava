@@ -15,14 +15,14 @@ public class FindLargestElement {
         Scanner sc=new Scanner(System.in);
         System.out.println("Give size of an array: ");
         try{
-       int n= sc.nextInt();
-       int[] array=new int[n];//proper syntax
+       int size= sc.nextInt();
+       int[] array=new int[size];//proper syntax
         System.out.println("put array elements: ");
-        for(int i=0;i<n;i++){
+        for(int i=0;i<size;i++){
             array[i]=sc.nextInt();//accepting an array elements one by one
         }
         System.out.println("array elements are :");
-        for(int i=0;i<n;i++){
+        for(int i=0;i<size;i++){
             System.out.print(" "+array[i]);
 
         }
@@ -46,7 +46,8 @@ public class FindLargestElement {
 }
 
 */
-//2)using itration
+/*
+//2)using itration=>finding The largest Element.
 import java.util.Scanner;
 
 public class FindLargestElement
@@ -66,5 +67,28 @@ public class FindLargestElement
       
    }
 }
+*/
 
-//3)Recursion Approach:
+
+//3)Finding Largest element by hardcoded input
+import java.util.Scanner;
+class FindLargestElement{
+
+    public static void main(String[]args){
+   Scanner sc=new Scanner(System.in);     
+   //int size=sc.nextInt();
+   int max=0;
+   int[] arr={2,3,123,432,45};
+    if(arr[0]<=0){
+        System.out.println("Enter the valid size");
+    }
+    for(int i=0;i<arr.length;i++){
+        
+        if(arr[i]>max){
+            max=arr[i];
+        }
+        
+    }
+     System.out.println("max elements is : "+max);
+    }
+    }
