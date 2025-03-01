@@ -56,7 +56,11 @@ import java.util.Scanner;
         }
 }
 */
+<<<<<<< HEAD
 //Logic 2:Iterative Approach:to find factorial of number
+=======
+//Logic2:Iterative Approach:to find factorial of number
+>>>>>>> 2de24ea (commit of the day)
 
 import java.util.Scanner;
 class Factorial{
@@ -128,4 +132,8 @@ import java.util.Scanner;
         System.out.println("Factorial of number : "+ num +" is "+result);
     }
  }
+<<<<<<< HEAD
 */
+=======
+*/
+>>>>>>> 2de24ea (commit of the day)
