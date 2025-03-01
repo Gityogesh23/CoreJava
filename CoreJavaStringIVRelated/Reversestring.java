@@ -1,6 +1,16 @@
 import java.security.Key;
 import java.util.Scanner;
-
+/*
+ //Using Internal java Methog
+class InvertString
+{
+public static void main(String args[])
+{
+StringBuffer a = new StringBuffer("Java programming is fun"); 
+System.out.println(a.reverse());
+}
+}
+ */
 /* 
 
 //  This approach creates a new String object in every loop iteration, 
