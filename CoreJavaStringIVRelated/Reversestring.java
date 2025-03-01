@@ -25,8 +25,8 @@ public class Reversestring {
  */
 
 
-//logic 2: using StrigBuilder and in one line
- 
+//logic 2: using StrigBuilder and in one line/Same we can done using StringBuffer As well.
+//Use StringBuffer if thread safety is required; otherwise, prefer StringBuilder for better performance.
 class ReverseString{
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
