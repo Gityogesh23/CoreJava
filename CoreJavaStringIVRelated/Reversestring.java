@@ -1,3 +1,4 @@
+import java.security.Key;
 import java.util.Scanner;
 
 /* 
@@ -21,11 +22,29 @@ public class Reversestring {
 }
 }
 )
-*/
+ */
+
+
+//logic 2: using StrigBuilder and in one line
+ 
+class ReverseString{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the String: ");
+        String str=sc.nextLine();
+        String str1=new StringBuilder(str).reverse().toString();//finish conv StringBuilder's mutable string into String
+        System.out.println("Reversed String Become:  "+str1);
+    }
+
+}
+
+
 
 // Java program to reverse a string using backward traversal
 //StringBuilder is mutable=>
 //meaning it can modify the existing object instead of creating a new one every time.
+
+/* 
 public class Reversestring {
 
     public static String revString(String str){
@@ -35,13 +54,16 @@ public class Reversestring {
         for(int i=str.length()-1;i>=0;i--){
                 rstr.append(str.charAt(i));
         }
-        //3. Is it necessary to use StringBuilder?
-// No, but it's highly recommended for efficiency.
-// You can use String with +=, but it will be slower in large inputs.
- //StringBuilder is not a String,so we need to convert it into a String
- //before returning it.
-
-//rstr.toString() converts the StringBuilder object to a String so that it can be used normally.
+        // #StringBuilder allows modifications without creating new objects (efficient).
+        // # String is immutable, so each modification creates a new object.
+        //  # toString() is needed when you need to store or return the result as a String.
+    //     Key Reasons for Calling .toString() on StringBuilder:=>
+    // 1.  StringBuilder is Mutable (Changes in Place)
+    //     StringBuilder allows modification of the string without creating a new object.
+    //     However, many methods (like reverse()) modify the StringBuilder directly instead of returning a String.
+    // 2. toString() Converts Mutable StringBuilder to Immutable String
+    //    StringBuilder does not inherit from String, so you cannot use String methods (like equals(), substring(), etc.) on it.
+    //    If you need a String, you must explicitly convert using .toString().
 
         return rstr.toString();
     }
@@ -57,6 +79,7 @@ public class Reversestring {
 
 
 }
+ */
 
 /*
  // Java program to reverse a string using two pointers
