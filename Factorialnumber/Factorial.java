@@ -21,7 +21,23 @@ import java.util.Scanner;
             return 1;
         }
          else{
-                return num*fact(num-1);
+                return num*fact(num-1);                                                 
+//Backtracking works like this:
+// fact(5)
+//  └── fact(4)
+//       └── fact(3)
+//            └── fact(2)
+//                 └── fact(1) → Base Case → Returns 1
+//And then unwinds:
+// fact(2) = 2 * 1 = 2 → Returns 2
+// fact(3) = 3 * 2 = 6 → Returns 6
+// fact(4) = 4 * 6 = 24 → Returns 24
+// fact(5) = 5 * 24 = 120 → Returns 120 (Final Result)
+//With backtracking approach function records are created at each function call
+//so it become overhead for memory incase larger input size prog.
+
+//always better to go with =>iterative Approach.=>refer next program of  logic 
+
             }
         }
     
@@ -40,8 +56,34 @@ import java.util.Scanner;
         }
 }
 */
+//Logic 2:Iterative Approach:to find factorial of number
+
+import java.util.Scanner;
+class Factorial{
+     public static int fact(int num){
+        int result=1;
+        for(int i=2;i<=num;i++){
+            result*=i;//result=result*i;
+        }    
+        return result;
+
+     }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the nummber: ");
+        int number=sc.nextInt();
+        if(number<0){
+            System.out.println("Enter Valid Number: ");
+
+        }
+        int factorialOf=fact(number);
+        System.out.println("The factorial of number is : "+" "+factorialOf);
+    }
+}
+
+
 /* 
- //find Factorial==>Logic 2
+ //find Factorial==>Logic 3
 import java.util.Scanner;
 import java.math.BigInteger;
 class Test{
@@ -63,6 +105,7 @@ public class Factorial{
     }
 }
 */
+/* 
 //Logic 3)
 import java.util.Scanner;
  class Test{
@@ -85,3 +128,4 @@ import java.util.Scanner;
         System.out.println("Factorial of number : "+ num +" is "+result);
     }
  }
+*/
