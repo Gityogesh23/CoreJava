@@ -6,6 +6,10 @@ we use logic for into the for loop=>for(int i=2;i<=Math.sqrt(number);i++{})
 import java.util.Scanner;
  class PrimeNumCheck{
 public static void checkPrime(int number){
+    if(number<=1){
+        System.out.println("Not prime number ");
+        return;
+     }
             if(number==2){
                 System.out.println("Is Prime");
                 return;
@@ -26,9 +30,7 @@ public static void checkPrime(int number){
         Scanner sc=new Scanner(System.in);
      System.out.println("Enter the Number: ");
      int num=sc.nextInt();
-     if(num<=0){
-        System.out.println("Enter the valid input number ");
-     }
+     
      checkPrime(num);
     }
  }
