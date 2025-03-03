@@ -1,3 +1,52 @@
+public class PalindromeChecker {
+    public static boolean isPalindrome(String s) {
+        // Step 1: Convert to lowercase and remove non-alphanumeric characters
+        StringBuilder filteredString = new StringBuilder();
+        for (char c : s.toCharArray()) {
+            if (Character.isLetterOrDigit(c)) {
+                filteredString.append(Character.toLowerCase(c));
+            }
+        }
+        
+        // Step 2: Check if it is a palindrome
+        String cleanString = filteredString.toString();
+        String reversedString = filteredString.reverse().toString();
+        return cleanString.equals(reversedString);
+    }
+
+    public static void main(String[] args) {
+        String input = "A man, a plan, a canal: Panama";
+        System.out.println("Is palindrome? " + isPalindrome(input));
+    }
+}
+
+
+/* 
+
+//simple format=>i.e for string with only characters.
+import java.util.Scanner;
+ class StringPalindrome{
+        public static void isPalindrome(String str){
+            String rstr="";
+            for(int i=str.length()-1;i>=0;i--){
+                rstr+=str.charAt(i);
+            }
+            if(str.equals(rstr)){
+                System.out.println("is Palindrome");
+            return;
+            }
+            System.out.println("Not palindrome");
+        }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the String: ");
+        String str=sc.nextLine();
+        isPalindrome(str);
+        sc.close();
+    }
+ }
+
+ */
 
 /*
  Problem Description
@@ -33,7 +82,7 @@ The input string after ignoring spaces, and all special characters is "Amanaplan
 which is a palindrome after ignoring the case.
 Explanation 2:
 The input string after ignoring spaces, and all special characters is "raceacar" which is not a palindrome
- */
+ 
 
  import java.util.Scanner;
 
@@ -89,3 +138,4 @@ The input string after ignoring spaces, and all special characters is "raceacar"
      }
  }
  
+ */
