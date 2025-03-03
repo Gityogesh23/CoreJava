@@ -17,7 +17,7 @@ public static void checkPrime(int number){
             for(int i=2;i<=Math.sqrt(number);i++){ 
                 //eg 37=>6.08=>2,3,4,5,6  =>37 is not divisible by these numbers.
                 //37 is only divisible by 37 and 1 itself hence its Prime Number.
-               if(number%2==0) {
+               if(number%i==0) {
                 System.out.println("Not  Prime");
                 return ;
                }
