@@ -1,7 +1,7 @@
 package FibonacciNumber;
 import java.util.Scanner;
 /* 
- fibonacci series: 0 1 1 2 3 5 8 13 21 34..
+ print nth (i.e count mean n or replace it. same meaning)fibonacci series: 0 1 1 2 3 5 8 13 21 34..
 
 class Fibonacci{
     static int n1=0,n2=1;
