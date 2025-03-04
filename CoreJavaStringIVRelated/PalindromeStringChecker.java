@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PalindromeChecker {
+public class PalindromeStringChecker {
     public static boolean isPalindrome(String str) {
         // Step 1: Convert to lowercase and remove non-alphanumeric characters
         StringBuilder filteredString = new StringBuilder();

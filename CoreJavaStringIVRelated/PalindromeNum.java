@@ -1,7 +1,5 @@
-import java.uil.Scanner;
-
+import java.util.Scanner;
 public class PalindromeNum 
-
 {
 public static void main(String args[])
 {
