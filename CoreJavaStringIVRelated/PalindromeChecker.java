@@ -1,8 +1,10 @@
+import java.util.Scanner;
+
 public class PalindromeChecker {
-    public static boolean isPalindrome(String s) {
+    public static boolean isPalindrome(String str) {
         // Step 1: Convert to lowercase and remove non-alphanumeric characters
         StringBuilder filteredString = new StringBuilder();
-        for (char c : s.toCharArray()) {
+        for (char c : str.toCharArray()) {
             if (Character.isLetterOrDigit(c)) {
                 filteredString.append(Character.toLowerCase(c));
             }
@@ -15,8 +17,10 @@ public class PalindromeChecker {
     }
 
     public static void main(String[] args) {
-        String input = "A man, a plan, a canal: Panama";
-        System.out.println("Is palindrome? " + isPalindrome(input));
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the String: ");
+        String str=sc.nextLine();
+        System.out.println("Is palindrome? " + isPalindrome(str));
     }
 }
 
