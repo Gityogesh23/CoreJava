@@ -52,9 +52,22 @@ class PalindromeNumber{
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the String of number: ");
-        int num=sc.nextInt();
+        String str=sc.nextLine();
         sc.close();
+        //clean the string of number first
+        // [^0-9] means "match anything that is NOT a digit (0-9)"=>^(negation sign)
 
+        String cleanedString=str.replaceAll("[^0-9]","");
+        
+        if (cleanedString.isEmpty()) { 
+            System.out.println("Invalid input! Please enter a valid number.");
+            return;
+        }
+        //to convert cleaned String into integer=>Integer.parseint() will play crucial role
+           int num=Integer.parseInt(cleanedString); //here is you done it!!congrats yogesh!!
+         
+           // Check if input is empty after cleaning
+        
         if(isPalindrome(num)){
         System.out.println("The palindrome Number is: "+num);
     }
