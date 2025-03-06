@@ -47,3 +47,20 @@ public class SwapTwoNum {
 
 */
 //logic 3:with XOR operators=>
+
+public class SwapTwoNum {
+    public static void swapNum(int a,int b){
+        a=a^b;
+        b=a^b;
+        a=a^b;
+        System.out.println("num1= " +a+"\t"+"num= "+b);
+    }
+    public static void main(String[] args){
+    Scanner sc=new Scanner(System.in);
+
+    System.out.println("Enter the numbers: ");
+   int num1=sc.nextInt();
+   int num2=sc.nextInt();
+   swapNum(num1,num2);
+}
+}
