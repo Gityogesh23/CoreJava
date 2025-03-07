@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 //most efficient and always prefer
-//using StringBuilder
+//using StringBuilder: StringBuilder is more efficient than using + for multiple concatenations because 
+//it modifies the original object instead of creating new string instances.
 public class ConcatString{
     public static void main(String[] args) {
         StringBuilder sb = new StringBuilder("Hello");
