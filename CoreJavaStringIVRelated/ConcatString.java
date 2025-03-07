@@ -13,6 +13,18 @@ public class ConcatString{
         System.out.println("Concatenated String: " + sb.toString());
     }
 }
+/*
+ //Best way to join multiple threads using separators;
+
+ public class StringConcat {
+    public static void main(String[] args) {
+        String result = String.join(" ", "Hello", "World");
+
+        System.out.println("Concatenated String: " + result);
+    }
+}
+
+ */
 
 
 /*
