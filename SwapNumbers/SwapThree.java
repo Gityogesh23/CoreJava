@@ -1,13 +1,13 @@
 import java.util.Scanner;
 class SwapThree{
-    public static void SwapThreeNum(int a,int b){
+    public static void SwapThreeNum(int a,int b,int c){
         //without third variable
         //let a=1,b=2=>how itcan be a=2 and b=1
         //a=a+b;//b=a-b;//b=a-b
         System.out.print("before swap : "+a+" "+b+" "+c);
-        // a=a+b;
-        // b=a-b;
-        // a=a-b;
+        a=a+b;
+        b=a-b;
+        a=a-b;
      System.out.println(" After swap :"+a+" "+b+" "+c);
     }
 public static void main(String[] args){
