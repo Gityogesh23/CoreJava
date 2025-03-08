@@ -1,9 +1,9 @@
 /*
- Syntax to declare and array &its mandatory to specify size to an array :
+ Syntax to declare and array & its mandatory to specify size to an array :
  type[] arrayName;
 TO CREATE AN Array further : numbers = new int[5];
 type[] var-name = new type [size];
-//int[]arr=new int[5];=>best way to intantialize an array
+//int[]arr=new int[5];=>best way to declared & intantialize an array
  */
 /* 
 //1)by iteration
