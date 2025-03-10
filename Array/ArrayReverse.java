@@ -5,16 +5,21 @@ public class ArrayReverse {
         System.out.println("Enter the size of an array : ");
         int size=sc.nextInt();
         int array[]=new int[size];
+        System.out.println("Enter the  array Elements: ");
+
         for(int i=0;i<size;i++){
             array[i]=sc.nextInt();
 
         }
         System.out.print("Array elements are: ");
         for(int i=0;i<size;i++){
-            System.out.println("array elements are: "+array[i]);
+            System.out.print(" "+array[i]);
         }
-        for(int i=array.length-1;i>=0;i++){
-            System.out.print("Reverse array elements are: array[i]);
+        System.out.println();
+        System.out.print("Reversed  array  Elements are : ");
+
+        for(int j=array.length-1;j>=0;j--){
+            System.out.print("  " +array[j]);
         }
     }
 }
