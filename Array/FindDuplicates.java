@@ -16,17 +16,18 @@ public class FindDuplicates {
      array_1[i]=sc.nextInt();
       
     }
-    System.out.print("Array elements are: ");
+    System.out.println("Array elements are: ");
     for (int i = 0; i < size; i++) {
         System.out.print(" " + array_1[i]);
     }
-    System.out.print("duplicate elements from Array Are : ");
     System.out.println();
+    System.out.println("duplicate elements from Array Are : ");
+  
         //int[] array_2=new int[size];
         for(int i=0;i<size;i++){
             for(int j=i+1;j<size;j++){
                 if(array_1[i]==array_1[j]){
-                    System.out.print("print duplicate elements are: "+" "+array_1[i]);
+                    System.out.println(" "+array_1[i]);
                 }
             }
        }
