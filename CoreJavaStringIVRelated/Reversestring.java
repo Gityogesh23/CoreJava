@@ -41,7 +41,7 @@ class ReverseString{
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the String: ");
-        String str=sc.nextLine();
+        String str=sc.nextLine().replaceAll("[^A-Za-z]","");
         String str1=new StringBuilder(str).reverse().toString();//finish conv StringBuilder's mutable string into String
         System.out.println("Reversed String Become:  "+str1);
     }
