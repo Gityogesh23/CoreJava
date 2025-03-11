@@ -1,7 +1,34 @@
 import java.security.Key;
 import java.util.Scanner;
+class ReverseString{
+    
+    public static String revString(String str){
+        
+       
+       // int num1=0,num2=1;
+       str=str.replaceAll("[^A-Za-z]" ,"");//line is important
+       String  rstr=" ";
+      
+       for(int i=str.length()-1;i>=0;i--){
+           rstr=rstr+str.charAt(i);//rstr+=str.charAt();
+       }
+        return rstr;
+    }
+       
+        
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the string to be reverse :");
+        String str=sc.nextLine();
+        String str_1=revString(str);
+        System.out.println("reverse String become: "+str_1); 
+        sc.close();
+    }
+   
+}
+
 /*
- //Using Internal java Methog
+ //Using Internal java Method
 class InvertString
 {
 public static void main(String args[])
@@ -34,7 +61,7 @@ public class Reversestring {
 )
  */
 
-
+/* 
 //logic 2: using StrigBuilder and in one line/Same we can done using StringBuffer As well.
 //Use StringBuffer if thread safety is required; otherwise, prefer StringBuilder for better performance.
 class ReverseString{
@@ -47,7 +74,7 @@ class ReverseString{
     }
 
 }
-
+*/
 
 
 // Java program to reverse a string using backward traversal
