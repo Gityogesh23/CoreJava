@@ -148,3 +148,36 @@ class ReverseString {
     }
 }
  */
+/*
+ public class ReverseString {
+    public static void main(String[] args) {
+        String original = "Hello, World!";
+        String reversed = reverseString(original);
+        System.out.println("Original: " + original);
+        System.out.println("Reversed: " + reversed);
+    }
+
+    public static String reverseString(String input) {
+        // Convert the input string to a character array
+        char[] chars = input.toCharArray();
+        // Initialize left and right pointers
+        int left = 0;
+        int right = chars.length - 1;
+
+        // Swap characters until the pointers meet in the middle
+        while (left < right) {
+            // Swap characters at left and right positions
+            char temp = chars[left];
+            chars[left] = chars[right];
+            chars[right] = temp;
+            // Move the pointers towards the center
+            left++;
+            right--;
+        }
+
+        // Convert the character array back to a string
+        return new String(chars);
+    }
+}
+
+ */
