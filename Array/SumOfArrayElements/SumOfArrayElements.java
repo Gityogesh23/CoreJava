@@ -1,6 +1,6 @@
 
 import java.util.Scanner;
-//1)Iteration method.
+//1)By Iterative Approach
 /*
 public class SumOfArrayElements {
     public static void main(String[] args) {
