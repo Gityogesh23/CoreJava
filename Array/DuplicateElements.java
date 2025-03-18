@@ -3,7 +3,7 @@ public class DuplicateElements {
    
     private static void isDuplicate(int[] arr) {
         boolean hasDuplicates = false; // Flag to check if duplicates exist
-       // System.out.println("\nDuplicate elements: ");
+        System.out.println("\nDuplicate elements: ");
         for(int i=0;i<arr.length;i++){
             for(int j=i+1;j<arr.length;j++){
                 if(arr[i]==arr[j]){
