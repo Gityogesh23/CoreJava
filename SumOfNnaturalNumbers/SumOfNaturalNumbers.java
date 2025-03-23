@@ -1,4 +1,5 @@
-/* To find the sum of n natural numners: 3 ways:
+/* Natural numbers ranging from=>1 to infinity.
+To find the sum of n natural numners: 3 ways:
 1)by for loop
 2)Using Formula for the Sum of Nth Term
 3)Using Recursion
@@ -15,7 +16,7 @@ public class SumOfNaturalNumbers {
         int n= sc.nextInt();
         int sum=0;
    
-    for(int i=0;i<=n;i++){   //using for loop
+    for(int i=1;i<=n;i++){   //using for loop
            sum =sum+i;        
      }
        System.out.println("sum=  "+sum);  
