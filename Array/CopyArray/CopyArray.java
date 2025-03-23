@@ -5,10 +5,12 @@ class CopyArray{
 
         int[] arr2=new int[arr1.length];//declaring and initializing array
         for(int i=0;i<arr1.length;i++){
-            arr2[i]=arr[i];
+            arr2[i]=arr1[i];
         }
+        return arr2;
     }
-    return arr;
+  
+   
     public static void main(String[] args){
        Scanner sc=new Scanner(System.in);
        System.out.println("Enter the size of an array: ");
@@ -28,6 +30,14 @@ class CopyArray{
         System.out.print(" "+arr[i]);
        }
        int[]copiedArray=copyArray(arr);
+       System.out.println();
+       System.out.print(" "+"Copied array become: ");
+      
+       for(int i=0;i<copiedArray.length;i++){
+        
+       System.out.println(" "+copiedArray[i]);
+       
+    }
     }catch(Exception e){
         System.out.println("input mismatch exception ");
        }
