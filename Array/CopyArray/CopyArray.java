@@ -1,3 +1,42 @@
+import java.util.Scanner;
+
+class CopyArray{
+    public static  int[] copyArray(int[]arr1){
+
+        int[] arr2=new int[arr1.length];//declaring and initializing array
+        for(int i=0;i<arr1.length;i++){
+            arr2[i]=arr[i];
+        }
+    }
+    return arr;
+    public static void main(String[] args){
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter the size of an array: ");
+       try{
+       int size=sc.nextInt();
+       if(size<0){
+        System.out.println("size should be positive: ");
+       }
+       int[] arr=new int[size]; //initialization of an array=>original Array
+       System.out.println("Enter the Elements inside Array : ");
+       for(int i=0;i<size;i++){
+       arr[i]=sc.nextInt();
+       
+       } 
+       System.out.print("Original array become: ");
+       for(int i=0;i<size;i++){
+        System.out.print(" "+arr[i]);
+       }
+       int[]copiedArray=copyArray(arr);
+    }catch(Exception e){
+        System.out.println("input mismatch exception ");
+       }
+        }
+    }
+
+
+/*
+Hard Coded:
 public class CopyArray{    
     public static void main(String[] args) {        
              //Initialize array     
@@ -23,3 +62,4 @@ public class CopyArray{
         }     
     }    
 }    
+*/
