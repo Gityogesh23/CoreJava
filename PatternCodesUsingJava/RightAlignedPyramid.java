@@ -1,4 +1,4 @@
-package PatternCodesUsingJava;
+//package PatternCodesUsingJava;
 /*
         *
       * *
@@ -7,7 +7,7 @@ package PatternCodesUsingJava;
 * * * * *
  */
 
-public class LeftRightAngleTriangle {
+public class RightAlignedPyramid {
     public static void main(String[] args) {
         int rows=6;
         for(int i=0;i<rows;i++){
