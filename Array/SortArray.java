@@ -25,8 +25,10 @@ public static int[] sortArray(int[]originalArray){
         for(int i=0;i<originalArray.length;i++){
             System.out.print(" "+originalArray[i]);
         }
-        System.out.println();
+        
        int[] sortedArray= sortArray(originalArray);
+       System.out.println();
+       System.out.println("Sorted Array Elements are:");
        for(int i=0;i<originalArray.length;i++){
         System.out.print("  "+sortedArray[i]);
       }
