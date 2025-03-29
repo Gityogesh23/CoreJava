@@ -15,7 +15,7 @@ public class CountFrequencyOfCharacters {
                     freq[i]++;    
                         
                     //Set string[j] to 0 to avoid printing visited character    
-                    string[j] = '0';    
+                    string[j] = '0';  /// Mark character as counted  
                 }    
             }    
         }    
