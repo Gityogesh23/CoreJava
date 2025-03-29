@@ -19,3 +19,11 @@ public class SwapWithoutTemp {
             System.out.println("After swap: " +str1 + " " + str2);
         }
     }
+    /*
+     What is the use of the substring() method in Java?
+The substring method is used to return substring from a specified string. This method takes two parameters i.e., beginIndex (the starting index) and endIndex (the ending index). In the case of substring(), method startIndex is inclusive and endIndex is exclusive.
+
+Syntax: 
+
+substring(int beginIndex, int endIndex)
+     */
