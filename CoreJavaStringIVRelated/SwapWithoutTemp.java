@@ -25,5 +25,5 @@ The substring method is used to return substring from a specified string. This m
 
 Syntax: 
 
-substring(int beginIndex, int endIndex)
+substring(int beginIndex, int endIndex)-,
      */
