@@ -88,7 +88,7 @@ class Factorial{
 /* 
  //find Factorial==>Logic 3
 import java.util.Scanner;
-import java.math.BigInteger;
+import java.Math.BigInteger;
 class Test{
     public static BigInteger fact(BigInteger num){
         if(num.equals(BigInteger.ZERO))
