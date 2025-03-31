@@ -17,7 +17,7 @@ but what if negative value is given by user then==> go to line number 28:=>now m
 import java.util.Scanner;
  class Factorial {
      static int fact(int num){
-        if(num==0){
+        if(num==0 || num==1){
             return 1;
         }
          else{
@@ -49,18 +49,18 @@ import java.util.Scanner;
         sc.close();
         if(count<0){
         System.out.println("Enter Positive number: ");
-            return;
+         return;
         }
         int factorial=fact(count);
         System.out.println("factorial of " +" "+ count +" is :" +factorial);
         }
 }
 */
-<<<<<<< HEAD
+
 //Logic 2:Iterative Approach:to find factorial of number
-=======
+
 //Logic2:Iterative Approach:to find factorial of number
->>>>>>> 2de24ea (commit of the day)
+
 
 import java.util.Scanner;
 class Factorial{
@@ -70,8 +70,8 @@ class Factorial{
             result*=i;//result=result*i;
         }    
         return result;
-
-     }
+    }
+     
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the nummber: ");
@@ -83,8 +83,7 @@ class Factorial{
         int factorialOf=fact(number);
         System.out.println("The factorial of number is : "+" "+factorialOf);
     }
-}
-
+   }
 
 /* 
  //find Factorial==>Logic 3
@@ -109,6 +108,7 @@ public class Factorial{
     }
 }
 */
+
 /* 
 //Logic 3)
 import java.util.Scanner;
@@ -133,7 +133,5 @@ import java.util.Scanner;
     }
  }
 <<<<<<< HEAD
+
 */
-=======
-*/
->>>>>>> 2de24ea (commit of the day)
