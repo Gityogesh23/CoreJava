@@ -143,3 +143,47 @@ The input string after ignoring spaces, and all special characters is "raceacar"
  }
  
  */
+/*
+ import java.util.Scanner;
+
+class Main {
+    public static Boolean isPalindrome(String string) {
+        if (string == null) {
+            return false;
+        }
+        
+        // Remove all non-alphanumeric characters
+        string = string.replaceAll("[^A-Za-z0-9]", "");
+        // Convert to lowercase for case-insensitive comparison
+        string = string.toLowerCase();
+        
+        String originalStr = string;
+        String rstr = "";
+        
+        for (int i = string.length() - 1; i >= 0; i--) {
+            rstr = rstr + string.charAt(i);
+        }
+        
+        if (originalStr.equals(rstr)) {
+            return true;
+        }
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Give a String Input");
+        String str = sc.nextLine();
+        
+        if (str.equals("")) {
+            System.out.println("Please enter the string");
+        } else if (isPalindrome(str)) {
+            System.out.println("String is Palindrome");
+        } else {
+            System.out.println("String is Not Palindrome");
+        }
+        
+        sc.close();  // Good practice to close resources
+    }
+}
+ */

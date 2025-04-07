@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DivideString {  
+public class DivideString{  
     public static void main(String[] args) {  
         Scanner sc=new Scanner(System.in);
           String str = sc.nextLine();  
