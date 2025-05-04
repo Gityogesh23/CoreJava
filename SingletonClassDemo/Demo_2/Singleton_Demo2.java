@@ -1,7 +1,7 @@
 //Lazy Initialization(Created When needed)
 
 class LazySingleton {
-    private static LazySingleton instance;
+    private static  LazySingleton instance;
 
     private LazySingleton(){}
 
