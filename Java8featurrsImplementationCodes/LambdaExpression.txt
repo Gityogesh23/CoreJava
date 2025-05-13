@@ -1,0 +1,32 @@
+✅ Recommended Learning Order (After Collections):
+Lambda expressions
+
+Functional interfaces (Predicate, Function, etc.)
+
+Method references
+
+Stream API
+
+Optional class
+
+File I/O using Streams
+
+
+Lambda Expression=>
+Okay, let's dive into Lambda Expressions in Java with three illustrative demos.
+
+What are Lambda Expressions?
+
+Lambda expressions are a concise way to represent an anonymous function (a function without a name). They allow you to treat functionality as a method argument, or code as data. Introduced in Java 8, they significantly simplify the syntax for creating instances of functional interfaces.
+
+Key Characteristics:
+
+Anonymous: They don't have an explicit name like a regular method.
+Functional: They are essentially functions that can be passed around and executed.
+Concise: They reduce the boilerplate code needed for anonymous inner classes.
+Syntax:
+(parameter list)->{expression or body of code};
+
+Lambda Expression can be used in the context of functional interfaces.A functional interface is an interface which has exactly one Abstract Method.
+Ex.Runnable,ActionListener,Comparator,Function,Consumer,Predicate.
+
