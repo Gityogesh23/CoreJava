@@ -7,7 +7,7 @@ public class StringAnagram {
     str1=str1.replaceAll("\\s","").toLowerCase();
     str2= str2.replaceAll("\\s","").toLowerCase();
  
-        //covert to character array
+        //convert to character array
         char[]sArray1=str1.toCharArray();
         char[] sArray2=str2.toCharArray();
         //java.util.Arrays
