@@ -1,0 +1,67 @@
+Functional Interface:
+introduced in java8 in march 2014.These are enabling functional programming in java.
+functional interfaces are declared in java.util.function package.
+
+Why are Functional Interfaces Important?
+=>Functional interfaces provide the target type for Lambda Expressions and Method References.
+When you write a lambda expression, the compiler needs to know what kind of interface it's 
+trying to implement. This is determined by the functional interface it's being assigned to or passed as an argument to.
+
+Think of a functional interface as a contract that a lambda expression or method reference 
+must adhere to in terms of its 
+parameter types and return type.
+
+The @FunctionalInterface Annotation:
+
+Java 8 introduced the @FunctionalInterface annotation. While not strictly required 
+for an interface to be a functional interface (if it meets the single abstract method rule),
+it's highly recommended for a few reasons:
+Clarity: It clearly signals the intent of the interface to be used functionally.
+Compiler Assistance: If you annotate an interface with @FunctionalInterface and then 
+accidentally add a second abstract method, the compiler will give you an error, 
+helping you maintain the contract.
+
+Built-in Functional Interfaces:
+java provides rich set of predefined functional Interfaces
+int the java.util.function package.
+1)Predicate<T>:Represents function that accepts one arguments.
+of type T and returns a boolean
+(SAM=>boolean test(t t))
+
+2)Consumer<T>:represents an operation that accepts a single input argument of type T 
+and return no result.
+(SAM=>void accept(T t))
+
+3)Function<T, R>:Represents a function that accepts one argument of type T and 
+returns of type R.
+(SAM=>R apply(T t))
+
+4)Supplier<T>: Represents a supplier od results.It takes no arguments  and return a result of
+type T.
+(SAM=>T get())
+
+5)UnaryOperator<T>: Represents an operation on a single operand that produces a result of the 
+
+same type as its operand (e.g., String::toUpperCase). It's a specialization of Function<T, T>. 
+(Single abstract method: T apply(T t))
+
+6)BinaryOperator<T>: Represents an operation upon two operands of the same type, producing a
+ result of the same type (e.g., Integer::sum). It's a specialization of BiFunction<T, T, T>. 
+ (Single abstract method: T apply(T t1, T t2))
+
+7)BiPredicate<T, U>: Represents a predicate (boolean-valued function) of two arguments. 
+(Single abstract method: boolean test(T t, U u))
+
+8)BiConsumer<T, U>: Represents an operation that accepts two input arguments and returns no result.
+ (Single abstract method: void accept(T t, U u))
+
+9)BiFunction<T, U, R>: Represents a function that accepts two arguments and produces a result. 
+(Single abstract method: R apply(T t, U u))
+
+SUMMARY:
+A Functional Interface has exactly one abstract method.
+It serves as the target type for Lambda Expressions and Method References.
+The @FunctionalInterface annotation is a good practice for clarity and compiler checking.
+Java provides a rich set of pre-defined functional interfaces in java.util.function.
+You can create your own functional interfaces to define specific functional contracts.
+Functional interfaces are a fundamental concept in Java 8 that enables a more concise and expressive way of writing code, especially when dealing with operations on data and asynchronous tasks.
