@@ -1,3 +1,4 @@
+package findDuplicates.folder_1_Less_OptimesdWay;
 import java.util.Scanner;
 public class DuplicateElements {
    

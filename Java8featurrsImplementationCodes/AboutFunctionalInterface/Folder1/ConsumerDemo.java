@@ -12,7 +12,7 @@ public class ConsumerDemo {
     public static void main(String[] args) {
         List<Integer>numbers=Arrays.asList(1,2,3,4,5,6);
       //Consumer to print each number 
-    Consumer<Integer>printNumber=num->System.out.println("Numbers :" +num);
+    Consumer<Integer>prisntNumber=num->System.out.println("Numbers :" +num);
     
     System.out.println("Printing each number:");
     numbers.forEach(printNumber);
