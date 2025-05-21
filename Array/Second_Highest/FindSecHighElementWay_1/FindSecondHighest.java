@@ -1,3 +1,4 @@
+
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -29,7 +30,7 @@ public class FindSecondHighest {
     TreeSet<Integer>set=new TreeSet<>();
     
     for(int num:arr){
-        set.add(num);
+        set.add(num);  //internally Autoboxing takeplace=>Integer.valueOf(num);
      }
      set.pollLast();//to remove highest 
      System.out.println("Second highest: " + set.last());
