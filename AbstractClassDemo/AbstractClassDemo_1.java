@@ -38,8 +38,10 @@ public class AbstractClassDemo_1 {
     public static void main(String[] args) {
         Circle circle=new Circle("Blue",12.00);
         System.out.println("Area of Circle is: "+circle.getArea());
+        circle.display(); // Optional - show color info
         Rectangle rectangle=new Rectangle("Red",12,12);
         System.out.println("Area of Circle is: "+rectangle.getArea());
+        rectangle.display(); // Optional - show color info
         
     }
   }
