@@ -1,0 +1,20 @@
+[
+  {
+    "ID": "C001",
+    "Name": "Alice Smith",
+    "Email": "alice@example.com",
+    "City": "New York"
+  },
+  {
+    "ID": "C002",
+    "Name": "Bob Johnson",
+    "Email": "bob@example.com",
+    "City": "Los Angeles"
+  },
+  {
+    "ID": "C003",
+    "Name": "Charlie Brown",
+    "Email": "charlie@example.com",
+    "City": "Chicago"
+  }
+]

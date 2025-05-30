@@ -33,12 +33,12 @@ public class BankException extends Exception{
          }
 
          // Example: Throwing the custom exception
-       if(bal[0]<2000){
+       if(bal[0]<2500){
          throw new BankException("insufficient balance");
        }
          }catch(BankException e){
-            System.out.println(" "+e.getMessage());
-
+            System.out.println(" " +e.getMessage());
+            return;
          }
       }
 }

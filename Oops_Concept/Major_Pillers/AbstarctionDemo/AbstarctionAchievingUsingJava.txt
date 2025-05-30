@@ -1,0 +1,291 @@
+                 ##   ABSTRACTION IN JAVA   ##
+
+Abstraction in Java is one of the four fundamental principles of Object-Oriented 
+Programming (OOP). It refers to the concept of hiding the complex implementation details 
+and showing only the essential features or functionalities to the user.
+
+The goal of abstraction is to simplify the system by reducing complexity and focusing on "what" an object does rather than "how" it does it.
+
+In Java, abstraction is primarily achieved through two mechanisms:
+
+1) Abstract Classes
+2) Interfaces
+1. Abstraction using Abstract Classes
+An abstract class is a class that is declared with the abstract keyword. It can have 
+abstract methods (methods without a body, which must be implemented by subclasses) as well 
+as concrete methods (methods with a body).
+
+Key Characteristics:
+
+Declared with the abstract keyword.
+Cannot be instantiated (you cannot create an object directly from an abstract class). It 
+exists to be inherited.
+Can have both abstract and concrete (non-abstract) methods.
+If a class has at least one abstract method, it must be declared abstract itself.
+Subclasses must provide implementations for all inherited abstract methods, or they too 
+must be declared as abstract.
+Can have constructors, but they are called by the subclass's constructor (super()).
+When to Use Abstract Classes:
+
+When you want to provide a partial implementation and force subclasses to complete the rest.
+When you have a "is-a" relationship (inheritance) and want to share common behavior (concrete methods) 
+while also defining abstract behavior that must be specialized by subclasses.
+When you want to encapsulate common fields and methods for a group of related classes.
+
+2)Abstraction using Interfaces
+An interface in Java is a blueprint of a class. It can contain method signatures 
+(without bodies), default methods, static methods, and constants. Before Java 8, 
+interfaces could only have abstract methods.
+
+Why Default Methods Are Added in java?
+Ans: Default methods were introduced in Java 8 primarily to address the critical challenge of backward compatibility when evolving interfaces.
+
+Before Java 8, adding any new abstract method to an interface would immediately break all 
+existing concrete classes implementing that interface, because those classes would then be
+required to provide an implementation for the new method. This made it virtually impossible 
+to extend core Java APIs like Collection or List without causing massive compilation errors 
+across the ecosystem.
+
+Default methods solve this by allowing an interface to provide a concrete implementation 
+for a method. Any class implementing that interface will automatically inherit this 
+default implementation. This means:=>Existing implementations don't break: They get the 
+new method with its default behavior for free.
+Interfaces can evolve: New features can be added without forcing code changes on every 
+consuming application.
+This capability was instrumental in enabling key Java 8 features like the Stream API and 
+Lambda Expressions. For instance, methods like forEach() could be added to the Iterable 
+interface without disrupting the vast existing codebase that used it, facilitating the 
+adoption of functional programming paradigms.
+
+## Key Characteristics:=>
+
+Declared with the interface keyword.
+All methods are implicitly public and abstract by default (before Java 8). Since Java 8, 
+they can also have default and static methods (with bodies). Since Java 9, they can also 
+have private methods.
+
+All variables are implicitly public static final by default.
+A class implements an interface using the implements keyword.
+A class can implement multiple interfaces (solving the "multiple inheritance" problem differently than C++).
+When to Use Interfaces:
+
+When you want to define a contract for behavior that multiple unrelated classes might fulfill.
+When you want to achieve multiple inheritance of behavior (as Java does not support multiple inheritance of classes).
+When you want to achieve loose coupling between components.
+When you want to define a set of services that a class can offer.
+eg=>interface Printable{
+    public abstract void print();
+    public default void display(){
+        Sop("disp of Printable");
+    }
+    class Color implements Printable{
+       public  int String="Green";
+        @Override
+        public abstract void print(){
+            sop("printable of Color");
+        }
+    }
+    class DateTime implements Printable{
+        public double time=12.00;
+        @Override
+        public abstract void print(){
+            sop("printable of DateTime");
+        }
+    }
+}
+
+
+#### SUMMARY ###
+In Java, abstraction is one of the four fundamental principles of Object-Oriented 
+Programming (OOP), alongside encapsulation, inheritance, and polymorphism. It focuses on 
+hiding the complex implementation details and showing only the essential features or 
+relevant information to the user.
+
+Think of it like this: when you drive a car, you use the steering wheel, accelerator, and 
+brake. You don't need to know how the engine, transmission, or braking system actually 
+work internally. The car abstracts away those complexities, providing you with a simple 
+interface to operate it.
+
+Key Concepts of Abstraction in Java:
+
+Focus on "What" not "How": Abstraction allows you to define what an object does, without 
+specifying how it does it. The implementation details are hidden.
+
+Reduced Complexity: By hiding internal workings, abstraction simplifies the view of 
+complex systems, making them easier to understand, use, and maintain.
+
+Increased Modularity and Flexibility: It allows you to change the internal implementation 
+of a class or method without affecting the code that uses it, as long as the public 
+interface remains the same. This promotes modular design.
+
+Security (through encapsulation): Often, abstraction works hand-in-hand with encapsulation.
+ Encapsulation hides the data and methods within a class, and abstraction then exposes 
+ only what's necessary through a well-defined interface.
+
+How Abstraction is Achieved in Java:
+
+Java primarily uses two mechanisms to achieve abstraction:
+
+Abstract Classes:
+
+Definition: A class declared with the abstract keyword.
+Purpose: It cannot be instantiated directly (you cannot create an object of an abstract 
+class). It acts as a blueprint for other classes.
+Abstract Methods: An abstract class can have abstract methods (methods declared with 
+abstract keyword and no body). These methods must be implemented by any concrete 
+(non-abstract) subclass that extends the abstract class.
+Concrete Methods: An abstract class can also have concrete (regular) methods with full 
+implementations.
+Constructors: Abstract classes can have constructors, which are called when a subclass 
+instance is created.
+Fields: Abstract classes can have fields (instance variables).
+Use Case: When you want to provide a common base class with some shared implementation and 
+some methods that must be defined by specific subclasses. For example, a Shape abstract 
+class might have an abstract method calculateArea(), because the way to calculate the area 
+differs for a Circle or a Rectangle.
+/*
+// Abstract class
+abstract class Vehicle {
+    String brand;
+
+    Vehicle(String brand) {
+        this.brand = brand;
+    }
+
+    // Abstract method (no body)
+    public abstract void drive();
+
+    // Concrete method
+    public void startEngine() {
+        System.out.println(brand + " engine started.");
+    }
+
+    public void stopEngine() {
+        System.out.println(brand + " engine stopped.");
+    }
+}
+
+// Concrete subclass
+class Car extends Vehicle {
+    Car(String brand) {
+        super(brand);
+    }
+
+    @Override
+    public void drive() {
+        System.out.println("Driving the " + brand + " car on the road.");
+    }
+}
+
+// Another concrete subclass
+class Motorcycle extends Vehicle {
+    Motorcycle(String brand) {
+        super(brand);
+    }
+
+    @Override
+    public void drive() {
+        System.out.println("Riding the " + brand + " motorcycle on two wheels.");
+    }
+}
+
+public class AbstractionDemo {
+    public static void main(String[] args) {
+        Vehicle myCar = new Car("Toyota");
+        myCar.startEngine(); // Calls concrete method from abstract class
+        myCar.drive();       // Calls implemented abstract method
+        myCar.stopEngine();
+
+        System.out.println();
+
+        Vehicle myBike = new Motorcycle("Harley");
+        myBike.startEngine();
+        myBike.drive();
+        myBike.stopEngine();
+
+        // Vehicle genericVehicle = new Vehicle("Generic"); // ERROR: Cannot instantiate abstract class
+    }
+}
+/*
+
+Interfaces:
+
+Definition: A blueprint of a class. It can contain method signatures (without bodies) and 
+constant fields. Before Java 8, interfaces could only have abstract methods and public 
+static final fields.
+Java 8+: Interfaces can now also contain default methods (with implementations) and static 
+methods.
+Java 9+: Interfaces can contain private methods.
+Purpose: To define a contract. Any class that implements an interface must provide 
+implementations for all its abstract methods.
+Multiple Inheritance of Type: A class can implement multiple interfaces, allowing it to 
+inherit behavior "contracts" from multiple sources, which is not possible with multiple 
+class inheritance in Java.
+Use Case: When you want to define a common behavior that can be implemented by unrelated 
+classes. For example, Flyable interface can be implemented by Bird and Airplane.
+Example:
+// Interface
+interface Swimmable {
+    void swim(); // Abstract method (implicitly public abstract)
+    void dive(); // Abstract method
+
+    // Default method (Java 8+)
+    default void floatOnWater() {
+        System.out.println("Floating effortlessly on the water surface.");
+    }
+
+    // Static method (Java 8+)
+    static void showWaterQuality() {
+        System.out.println("Water quality is good for swimming.");
+    }
+}
+
+// Class implementing the interface
+class Duck implements Swimmable {
+    @Override
+    public void swim() {
+        System.out.println("Duck is paddling gracefully.");
+    }
+
+    @Override
+    public void dive() {
+        System.out.println("Duck dips its head underwater.");
+    }
+}
+
+// Another class implementing the interface
+class Human implements Swimmable {
+    private String name;
+
+    Human(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void swim() {
+        System.out.println(name + " is doing the freestyle stroke.");
+    }
+
+    @Override
+    public void dive() {
+        System.out.println(name + " takes a deep breath and dives in.");
+    }
+}
+
+public class InterfaceAbstractionDemo {
+    public static void main(String[] args) {
+        Swimmable donald = new Duck();
+        donald.swim();
+        donald.dive();
+        donald.floatOnWater(); // Call default method
+
+        System.out.println();
+
+        Swimmable john = new Human("John");
+        john.swim();
+        john.dive();
+        john.floatOnWater();
+
+        Swimmable.showWaterQuality(); // Call static method
+    }
+}
