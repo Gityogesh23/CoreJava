@@ -1,7 +1,7 @@
 // Parent Class (Superclass)
 class Animal {
     private int no_of_legs;
-    private String name; // Fixed typo "Animal name :" in disp()
+    private String name; 
 
     // No-argument constructor for Animal
     public Animal() {
