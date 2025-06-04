@@ -1,0 +1,10 @@
+ #Multiple Inheritance in java =>can be achieved by using Interfaces.
+ 
+ 
+ #Why Functional Interfaces Are Important in Industry:
+
+Used in Java 8+ features like Streams, Lambdas, and method references.
+Encourage clean, concise, and functional-style programming.
+Enable better parallelism, performance, and readability.
+Widely used in backend APIs, data processing, filtering, mapping, etc.
+
