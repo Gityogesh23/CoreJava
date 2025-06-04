@@ -1,6 +1,6 @@
 //in java multiple inheritance cannot be achieved by using classes ,can achieve using Interface
 
- interface InterfaceA {
+ interface Interface_A {
     // Abstract method
     void show();
 
@@ -15,7 +15,7 @@
     }
 }
 
-interface InterfaceB {
+interface Interface_B {
     // Abstract method
     void display();
 
@@ -31,7 +31,7 @@ interface InterfaceB {
 }
 
 // Class implementing multiple interfaces
-public class MultipleInheritanceDemo implements InterfaceA, InterfaceB {
+public class MultipleInheritanceDemo implements Interface_A, Interface_B {
 
     // Implement abstract methods
     public void show() {
@@ -46,7 +46,7 @@ public class MultipleInheritanceDemo implements InterfaceA, InterfaceB {
     @Override
     public void greet() {
         // We can choose which default method to call:
-        InterfaceA.super.greet(); // or InterfaceB.super.greet();
+        Interface_A.super.greet(); // or InterfaceB.super.greet();
     }
 
     public static void main(String[] args) {
@@ -57,8 +57,8 @@ public class MultipleInheritanceDemo implements InterfaceA, InterfaceB {
         obj.greet();          // Overridden greet()
 
         // Calling static methods from interfaces
-        InterfaceA.staticGreet();
-        InterfaceB.staticGreet();
+        Interface_A.staticGreet();
+        Interface_B.staticGreet();
     }
 }
 
