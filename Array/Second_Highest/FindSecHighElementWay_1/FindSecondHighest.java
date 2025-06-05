@@ -1,4 +1,13 @@
-
+import java.util.Arrays;
+public class FindSecondHighest {
+    public static void main(String[] args) {
+       int [] arr={12,8,5,6,11,24}; 
+       Arrays.sort(arr);
+        System.out.println("Second Highest elements is : "+(arr[arr.length-2]));//arr[arr.length]=>return length of arr as simple as that 
+        //we are just retrieve the element at index arr[length-2];
+    }
+}
+/* 
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -17,6 +26,7 @@ public class FindSecondHighest {
     }
 }
 
+*/
 
 /* 
 import java.util.TreeSet;
