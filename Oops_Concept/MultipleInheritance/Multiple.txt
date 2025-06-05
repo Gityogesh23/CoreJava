@@ -1,6 +1,7 @@
  #Multiple Inheritance in java =>can be achieved by using Interfaces.
  
- 
+ b'z with classes its impossible to achieve it,it will leads to diamond problem and 
+ compiler will be in Ambiguity state.
  #Why Functional Interfaces Are Important in Industry:
 
 Used in Java 8+ features like Streams, Lambdas, and method references.
