@@ -3,10 +3,17 @@ import java.util.Arrays;
 import java.util.Scanner;
 public class StringAnagram {
     public static boolean isAnagram(String str1,String str2){
-         //remove spaces and convert into lowecase  
+
+         //remove spaces and convert into lowecase 
+
     str1=str1.replaceAll("\\s","").toLowerCase();
     str2= str2.replaceAll("\\s","").toLowerCase();
- 
+ /*
+ we can also use=>
+ public String replaceAll(String regex, String replacement) 
+ ex.str1=str1.replceAll([^A-Za-z0-9],"");
+ str2=str2.replaceAll([^A-za-z0-9],"");
+*/
         //convert to character array
         char[]sArray1=str1.toCharArray();
         char[] sArray2=str2.toCharArray();
