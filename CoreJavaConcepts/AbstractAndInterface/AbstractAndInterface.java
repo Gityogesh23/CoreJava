@@ -72,12 +72,21 @@ Output:
  /*
   In Java, both abstract classes and interfaces are mechanisms for achieving abstraction, but they differ in their capabilities and typical use cases:
 Abstract Class:
-Definition: An abstract class can have both abstract methods (without implementation) and concrete methods (with implementation). It can also have constructors, instance variables, and static variables.
+Definition: An abstract class can have both abstract methods (without implementation) and 
+concrete methods (with implementation). It can also have constructors, instance variables, 
+and static variables.
 Inheritance: A class can only extend one abstract class (single inheritance). 
-Purpose: Used when there is a "is-a" relationship, and you want to provide a common base with some shared functionality and enforce certain methods to be implemented by subclasses. It defines a partial implementation or a blueprint for a group of related classes. 
+Purpose: Used when there is a "is-a" relationship, and you want to provide a common base 
+
+with some shared functionality and enforce certain methods to be implemented by subclasses. 
+It defines a partial implementation or a blueprint for a group of related classes. 
 Interface:
 Definition:
-An interface primarily defines a contract. Before Java 8, interfaces could only have abstract methods. Since Java 8, they can also include default methods (with implementation) and static methods. All fields in an interface are implicitly public, static, and final. 
+An interface primarily defines a contract. Before Java 8, interfaces could only have 
+abstract methods. Since Java 8, they can also include default methods (with implementation)
+and static methods. All fields in an interface are implicitly public, static, and final. 
+
 Inheritance:
 A class can implement multiple interfaces (multiple inheritance of behavior). 
+
   */
