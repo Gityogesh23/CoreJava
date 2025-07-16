@@ -1,0 +1,25 @@
+What is synchronized in Java?
+In Java, synchronized is a keyword used to control thread access to critical sections 
+of code — typically shared resources like variables, methods, or blocks of code.
+
+🔹 Why use synchronized?
+Java supports multithreading, meaning multiple threads can access shared resources simultaneously.
+
+Without synchronization, this can lead to race conditions, inconsistent data, or unexpected behavior.
+
+synchronized ensures that only one thread can access the critical section at a time, making your code thread-safe.
+
+🔹 When to use synchronized?
+Use it when:
+
+You have shared data being accessed or modified by multiple threads.
+
+You want to ensure thread safety for certain operations.
+
+Example: Banking system, counters, logging, shared queues.
+
+| Type                | Description                                                        |
+| ------------------- | ------------------------------------------------------------------ |
+| Synchronized Method | Locks the **entire method** for one thread at a time               |
+| Synchronized Block  | Locks only a **specific part** of the method, improving efficiency |
+
