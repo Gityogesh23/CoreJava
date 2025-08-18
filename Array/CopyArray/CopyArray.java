@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 class CopyArray{
     public static  int[] copyArray(int[]arr1){
 
