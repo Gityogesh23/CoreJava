@@ -7,6 +7,13 @@ public class FindSecondHighest {
         //we are just retrieve the element at index arr[length-2];
     }
 }
+/*if you are solving this using streams-->
+ Comparator instances are commonly used with sorting methods in classes like 
+ Arrays.sort(), Collections.sort(), and Java Stream API's sorted() method.
+*/
+
+
+
 /* 
 import java.util.Arrays;
 import java.util.Collections;
