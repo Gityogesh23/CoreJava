@@ -6,8 +6,8 @@ public class StringAnagram {
 
          //remove spaces and convert into lowecase 
     if(str1.isBlank() || str2.isBlank()) return false;
-    str1=str1.replaceAll("\\s","").toLowerCase();
-    str2= str2.replaceAll("\\s","").toLowerCase();
+    str1=str1.replaceAll("[^A-Za-z]","").toLowerCase();
+    str2= str2.replaceAll("[^A-Za-z]","").toLowerCase();
  /*
  we can also use=>
  public String replaceAll(String regex, String replacement) 
@@ -31,11 +31,8 @@ public class StringAnagram {
         System.out.println("Enter the String two");
         String str2=sc.nextLine();   
        boolean result=isAnagram(str1,str2);
-     if(result){
-        System.out.println("string is anagram");
-     }else{
-        System.out.println("string is not  anagram");
-     }
+    System.out.println((result) ? "Strings are anagram":"string aren't anagram"); 
+     
         }catch(Exception e){
             System.out.println("input mismatch exception");
         }
