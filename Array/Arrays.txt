@@ -1,0 +1,23 @@
+1) Arrays.asList()
+
+Introduced: Java 1.2
+Mutability: Creates a fixed-size List backed by the original array. This means you cannot 
+add or remove elements, but you can modify the existing elements, and these changes will 
+be reflected in the original array and vice-versa.
+Null Elements: Allows null elements.
+Thread Safety: Not inherently thread-safe because the backing array can be modified 
+without synchronization. 
+Usage: Suitable when you need a fixed-size list that can be modified in terms of its 
+elements, and you are aware of the implications of it being backed by an array.
+
+2) List.of()
+
+Introduced: Java 9
+Mutability: Creates an immutable List. This means you cannot add, remove, or modify 
+elements after creation. Any attempt to do so will result in an UnsupportedOperationException. 
+Null Elements: Does not allow null elements. Attempting to create a list with null elements 
+will result in a NullPointerException.
+Thread Safety: Inherently thread-safe due to its immutability, as no modifications can 
+occur after creation.
+Usage: Ideal for creating lists that are intended to be constant and cannot be changed, 
+such as configuration details or fixed sets of values.
