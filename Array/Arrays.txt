@@ -21,3 +21,10 @@ Thread Safety: Inherently thread-safe due to its immutability, as no modificatio
 occur after creation.
 Usage: Ideal for creating lists that are intended to be constant and cannot be changed, 
 such as configuration details or fixed sets of values.
+
+In Summary:
+
+Choose Arrays.asList() when you need a fixed-size list where you might want to modify 
+existing elements and are comfortable with it being backed by an array.
+Choose List.of() when you need an immutable list that cannot be changed after creation, 
+offering thread safety and ensuring data integrity.
