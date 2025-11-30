@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class StringAnagram {
     public static boolean isAnagram(String str1,String str2){
 
-         //remove spaces and convert into lowercase 
+         //remove spaces and convert into lowecase 
     if(str1.isBlank() || str2.isBlank()) return false;
     str1=str1.replaceAll("[^A-Za-z]","").toLowerCase();
     str2= str2.replaceAll("[^A-Za-z]","").toLowerCase();
@@ -14,7 +14,7 @@ public class StringAnagram {
  ex.str1=str1.replceAll([^A-Za-z0-9],"");
  str2=str2.replaceAll([^A-za-z0-9],"");
 */
-        //convert to character array-->because after that arrays.sort()only applicable on Array 
+        //convert to character array-->beacsue after that arrays.sort()only applicable on Array 
         //i.e here array of char after this step not on String understood.
         char[]sArray1=str1.toCharArray();  // ['s','t','r','i','n','g']
         char[] sArray2=str2.toCharArray(); // ['t','s','r','i','g','n']
