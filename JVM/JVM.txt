@@ -1,0 +1,28 @@
+1) Java is Compiled or Interprreter language?
+
+Ans: Both Compiled as well as Interpreter language.
+Javac : source code --->Byte code.(plateform independent)
+JVM(Interpreter) : Executes Byte Code on the specific OS
+JIT Compiler(Optimiaer): Translates Frequently used byte code sections directly into 
+native machine coe faster.
+
+Note: 
+
+Compilation (Ahead-of-Time): The Java source code (.java) is compiled by javac into an 
+intermediate format called Bytecode (.class file). This code is not understood by the 
+computer's CPU directly.
+
+Interpretation/Compilation (Just-in-Time): The Java Virtual Machine (JVM) takes the 
+Bytecode and either interprets it line-by-line or compiles it into machine-specific 
+code on-the-fly using a JIT (Just-In-Time) compiler. 
+
+Compilation (Ahead-of-Time): The Java source code (.java) is compiled by javac into an 
+intermediate format called Bytecode (.class file). This code is not understood by the 
+computer's CPU directly.
+Interpretation/Compilation (Just-in-Time): The Java Virtual Machine (JVM) takes the 
+Bytecode and either interprets it line-by-line or compiles it into machine-specific 
+code on-the-fly using a JIT (Just-In-Time) compiler. 
+
+Note: Because of this two-stage process, Java is often described as a hybrid language
+Javac SourceFile.java
+java SourceFile
