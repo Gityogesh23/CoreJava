@@ -1,4 +1,9 @@
-
+/*
+Abstarct Class : Abstract classes are included in java 8 (march 2014)
+ - can't intantiated directly but via its extended classes.
+ - contains abstract Methods,Concrete Methods, Constructors,Instance variables,Static and Final Methods as well.
+ 
+*/
 abstract class Shape{
     String color;
 
