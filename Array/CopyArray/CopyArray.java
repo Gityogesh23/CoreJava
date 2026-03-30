@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-
+ 
 class CopyArray{
     public static  int[] copyArray(int[]arr1){
 
@@ -28,7 +28,7 @@ class CopyArray{
        } 
        System.out.print("Original array become: ");
        for(int i=0;i<size;i++){
-        System.out.print(" "+arr[i]);
+        System.out.println(" "+arr[i]);
        }
        int[]copiedArray=copyArray(arr);
        System.out.println();
@@ -74,3 +74,4 @@ public class CopyArray{
     }    
 }    
 */
+
