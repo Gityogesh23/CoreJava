@@ -42,7 +42,7 @@ class PalindromeNumber{
        while(number>0){
         int digit=number%10;//121%10=>1
         reversedNum=reversedNum*10+digit;//0*10+1=>1
-        number=number/10;//121/10=>12go to while repeat similar steps
+        number=number/10;//121/10=>12 go to while repeat similar steps
 
        }    
        return originalNum==reversedNum;
