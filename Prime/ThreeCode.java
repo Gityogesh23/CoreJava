@@ -1,4 +1,4 @@
-
+//This is the best logic to find Prime Number usinf core java.
 import java.util.Scanner;
 public class ThreeCode{
     
