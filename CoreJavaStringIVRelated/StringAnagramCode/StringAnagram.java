@@ -9,7 +9,9 @@ public class StringAnagram {
     //Strings in java are immutable but this methohds:replace(),replcaAll(regex,replacement) make it mutable.
     //always assigned it with varaible here str1 itself we assigne else on next line it become as previous.
     str1=str1.replaceAll("[^A-Za-z]","").toLowerCase();
+    System.out.println("str1");
     str2= str2.replaceAll("[^A-Za-z]","").toLowerCase();
+    System.out.println("str2");
  /*
  we can also use=>
  public String replaceAll(String regex, String replacement) 
