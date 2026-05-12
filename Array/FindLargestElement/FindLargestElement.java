@@ -1,3 +1,15 @@
+
+import java.util.Arrays;
+public class FindLargestElement{
+    public static void main(String[] args) {
+        int[]arr={12,13,15,27,18,222};
+
+        int max=Arrays.stream(arr)
+                      .max()    
+                      .getAsInt();
+        System.out.println("Max element from array becomes: " +max);
+    }
+}
 /*
  Syntax to declare and array & its mandatory to specify size to an array :
  type[] arrayName;
@@ -69,8 +81,8 @@ public class FindLargestElement
 }
 */
 
+/*
 
-//3)Finding Largest element by hardcoded input
 import java.util.Scanner;
 class FindLargestElement{
 
@@ -92,3 +104,6 @@ class FindLargestElement{
      System.out.println("max elements is : "+max);
     }
     }
+
+*/
+//3)Finding Largest element by hardcoded input
