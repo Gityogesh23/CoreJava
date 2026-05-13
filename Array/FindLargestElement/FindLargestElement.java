@@ -11,6 +11,15 @@ public class FindLargestElement{
     }
 }
 /*
+sol 2:
+Integer[] numbers = {1, 10, 5, 20, 15};
+
+Integer max = Arrays.stream(numbers)
+                    .max(Integer::compare) // Compares elements to find the largest
+                    .get();                // Retrieves the value from Optional
+
+*/
+/*
  Syntax to declare and array & its mandatory to specify size to an array :
  type[] arrayName;
 TO CREATE AN Array further : numbers = new int[5];
