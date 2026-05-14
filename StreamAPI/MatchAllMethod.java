@@ -4,6 +4,7 @@ import java.util.List;
 “Is EJB a class or object?”
 Ans: EJB is a server side java component written as a class.
      but it's objects/instances are created and managed by EJb container.
+     unlike normal class which can be managed manually.
 */
 public class MatchAllMethod {
     
