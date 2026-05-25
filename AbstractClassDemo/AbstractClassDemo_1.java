@@ -39,7 +39,7 @@ class Rectangle extends Shape {
     double getArea() {
         return length * width;
     }
-} // ✅ FIXED: Properly closed Rectangle class here
+} // ✅ FIXED: Properly closed Rectangle class here - abstract class characteristics are imp to note. we can achieve abstarction (oops piller among 4) using.
 
 public class AbstractClassDemo_1 {
     public static void main(String[] args) {
