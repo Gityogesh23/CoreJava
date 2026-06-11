@@ -27,3 +27,12 @@ public static void main(String[] args) {
  }   
 }    
 }
+/*
+FOR 
+A A A A 
+A A A 
+A A
+A
+
+slight change-->just comment line no24 i.e ch++;
+*/
