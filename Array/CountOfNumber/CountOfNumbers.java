@@ -10,14 +10,18 @@ public class CountOfNumbers {
         for(int i=0;i<arr.length;i++){
             if(arr[i]==1){
                 count=count+1;
-                
-            }else{
-                if(count>max){
-                    max=count;
+          // Update max immediately whenever count grows      
+                if (count > max) {
+                    max = count;
                 }
-                count=0;  //if you want count of 1's then just comment this line.
             }
+            // Just reset the counter when you hit a 0
+                else{
+                    count=0;  //if you want count of 1's then just comment this line.
+
+                }
+            }
+            System.out.println(max);
         }
-        System.out.println(max);
+        
     }
-}
