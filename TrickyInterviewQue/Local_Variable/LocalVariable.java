@@ -45,3 +45,7 @@ public class LocalVariable {
 //compile time error->local variables referenced from lambda expression must be final or effectively final
     }
 }
+/*
+The moment you add x++, you are attempting to modify x. This instantly ruins its status 
+as "effectively final," and the compiler steps in to stop you from creating a thread-unsafe environment
+*/
