@@ -57,8 +57,8 @@ class Main{
         
         for(int right=0;right<str.length();right++){
             while(set.contains(str.charAt(right))){
-                set.remove(left);
-                left++;
+                set.remove(str.charAt(left));//removes character at an respevtive index,means i.e index where left points.
+                left++; //index++
             }
             //if not contains
             set.add(str.charAt(right));
