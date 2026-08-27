@@ -36,3 +36,49 @@ public class FindMaxLengthOfSubstringWithNonRepeatedChars {
 	}
 
 }
+/*
+import java.util.Scanner;
+import java.util.Set;
+import java.util.HashSet;
+
+class Main{
+    public static void getSubstring(String str){
+        if(str==null){
+          throw new IllegalArgumentException("string shoud have charactes as input.");
+        }
+        int startMax=0;
+        int maxLen=0;
+        int left=0;
+        Set<Character>set=new HashSet<>();
+        
+        
+        for(int right=0;right<str.length();right++){
+            while(set.contains(str.charAt(right))){
+                set.remove(str.charAt(left));//removes character at an respevtive index,means i.e index where left points.
+                left++; //index++
+            }
+            //if not contains
+            set.add(str.charAt(right));
+            if(right-left+1>maxLen){
+                maxLen=right-left+1;
+                startMax=left;
+            }
+            
+        }
+        String uniqueStr=str.substring(startMax,startMax+maxLen);
+        System.out.println("unique string is :"+uniqueStr);
+         System.out.println("maximum legth of unique Strin is :"+maxLen);
+    }
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the String :");
+        String str=sc.nextLine();//abcbbc
+        getSubstring(str);
+        sc.close();
+    //   System.out.println("unique substring becomes :"+result);
+    }
+}
+*/
+
+/* Find an unique substring from input string*/
+
